@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ammu-Nation GTA V</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" type="image/png" href="images/Ammu_Nation_Logo_GTA-V.webp" />
+</head>
+<body>
+  <header>
+    <img src="images/ammunation.png" alt="Logo Ammu-Nation" width="230" />
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#nosotros" class="activo">Nosotros</a></li>
+      <li><a href="#Catálogo">Catálogo</a></li>
+      <li><a href="#Clientes">Clientes</a></li>
+      <li><a href="#formulario">Contacto</a></li>
+      <li><a href="#lista-carrito" id="ver-carrito">🛒 Carrito (<span id="contador">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="nosotros" class="seccion-nosotros">
+    <h2 class="titulo-seccion">Nosotros</h2>
+    <div class="linea-separadora"></div>
+    <div class="contenido-nosotros">
+      <div class="video-nosotros">
+        <iframe width="100%" height="315"
+          src="https://www.youtube.com/embed/z-cQnyKwQQA"
+          title="Video de presentación"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+      <div class="texto-nosotros">
+        <p>
+          Bienvenidos a Ammu-Nation, el orgullo armado de América desde que alguien dijo "¿y si solucionamos todo a tiros?". Somos la cadena número uno en ventas de armas, municiones y libertades mal entendidas. Ya sea que quieras defender tu hogar, impresionar a tus amigos en el campo de tiro o simplemente compensar alguna inseguridad, tenemos justo lo que necesitás, cargado y listo. En Ammu-Nation no preguntamos por qué necesitás un lanzacohetes… solo te ofrecemos uno con descuento. Porque si algo aprendimos en este país, es que nada dice “civilización” como una ametralladora en el baúl.
+        </p>
+      </div>
+    </div>
+    </section>
+    
+    <h2 id="Catálogo">Nuestras Armas</h2>
+    <div class="linea-separadora"></div>
+    <section class="productos">
+      <article class="producto">
+        <img src="images/pistola_9mm.jpg.webp" alt="Pistola" />
+        <h3>Pistola 9MM</h3>
+        <p>$350</p>
+        <button onclick="agregarAlCarrito('Pistola 9mm', 350)">Agregar al carrito</button>
+      </article>
+
+      <article class="producto">
+        <img src="images/rifle_de_asalto.webp" alt="Rifle de asalto" />
+        <h3>Rifle de Asalto</h3>
+        <p>$1.400</p>
+        <button onclick="agregarAlCarrito('Rifle de Asalto', 1400)">Agregar al carrito</button>
+      </article>
+
+      <article class="producto">
+        <img src="images/francotirador.webp" alt="Francotirador" />
+        <h3>Rifle Francotirador</h3>
+        <p>$5.000</p>
+        <button onclick="agregarAlCarrito('Rifle Francotirador', 5000)">Agregar al carrito</button>
+      </article>
+
+      <article class="producto">
+        <img src="images/escopeta_de_corredera.webp" alt="Escopeta de corredera" />
+        <h3>Escopeta de corredera</h3>
+        <p>$550</p>
+        <button onclick="agregarAlCarrito('Escopeta de corredera', 550)">Agregar al carrito</button>
+      </article>
+
+      <article class="producto">
+        <img src="images/lanza granadas.webp" alt="Lanza granadas" />
+        <h3>Lanza granadas</h3>
+        <p>$8.100</p>
+        <button onclick="agregarAlCarrito('Lanza granadas', 8100)">Agregar al carrito</button>
+      </article>
+
+      <article class="producto">
+        <img src="images/minigun.webp" alt="Minigun" />
+        <h3>Minigun</h3>
+        <p>$15.000</p>
+        <button onclick="agregarAlCarrito('Minigun', 15000)">Agregar al carrito</button>
+      </article>
+
+      <article class="producto">
+        <img src="images/micro_smg.webp" alt="Micro SMG" />
+        <h3>Micro SMG</h3>
+        <p>$850</p>
+        <button onclick="agregarAlCarrito('Micro SMG', 850)">Agregar al carrito</button>
+      </article>
+
+      <article class="producto">
+        <img src="images/rifle_pesado.webp" alt="Rifle pesado" />
+        <h3>Rifle pesado</h3>
+        <p>$1.800</p>
+        <button onclick="agregarAlCarrito('Rifle pesado', 1800)">Agregar al carrito</button>
+      </article>
+      
+      <article class="producto">
+        <img src="images/granada.webp" alt="Granada" />
+        <h3>Granada</h3>
+        <p>$350</p>
+        <button onclick="agregarAlCarrito('Granada', 350)">Agregar al carrito</button>
+      </article>
+    </section>
+    
+
+    <section id="carrito" class="oculto">
+      <h2>Carrito de compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p><strong>Total: $<span id="total">0</span></strong></p>
+    </section>
+
+    <section class="testimonios" id="Clientes">
+      <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
+      <div class="linea-separadora"></div>
+      <div class="contenedor-testimonios">
+        <div class="tarjeta">
+          <div class="usuario">
+            <div class="icono">👤</div>
+            <strong>Tomas Herrera</strong>
+          </div>
+          <p class="comentario">"Mucho recoil mi rifle"</p>
+          <p class="estrellas">★★☆☆☆</p>
+        </div>
+
+        <div class="tarjeta">
+          <div class="usuario">
+            <div class="icono">👤</div>
+            <strong>Lautaro Calvo.</strong>
+          </div>
+          <p class="comentario">"Me pegue un tiro en el pie"</p>
+          <p class="estrellas">★★★★★</p>
+        </div>
+
+        <div class="tarjeta">
+          <div class="usuario">
+            <div class="icono">👤</div>
+            <strong>Maximo Mascena.</strong>
+          </div>
+          <p class="comentario">"Me compre una granada y casi me mata; quiere decir que funciona!!"</p>
+          <p class="estrellas">★★★★☆</p>
+        </div>
+
+        <div class="tarjeta">
+          <div class="usuario">
+            <div class="icono">👤</div>
+            <strong>Solange Rodrigo</strong>
+          </div>
+          <p class="comentario">"Ya no voy a tener mas miedo de tomarme el micro a la noche"</p>
+          <p class="estrellas">★★★★★</p>
+        </div>
+        </div>
+          <section id="formulario">
+          <h2>Dejanos tu opinión</h2>
+          <form action="#" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo" required><br><br>
+            <label for="comentario">Comentario:</label><br>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea><br><br>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+        </div>
+      </section>
+</section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tienda Ammu-Nation - GTA V</p>
+  </footer>
+
+
+  <script src="js/carrito.js"></script>
+</body>
+</html>
