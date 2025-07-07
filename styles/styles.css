@@ -50,11 +50,11 @@
       background-color: #990000;
     }
   
-    .video-nosotros iframe {
-      width: 80%;       /* Más chico que 100% */
-      height: 250px;    /* Más bajo */
-      display: block;
-      margin: 0 auto;   /* Centrado */
+      .nosotros-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
   }
   
     .texto-nosotros {
@@ -112,7 +112,15 @@
       .contenedor-nosotros {
         flex-direction: column-reverse;
       }
-
+      .nosotros-video {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .nosotros-video iframe {
+        aspect-ratio: 16 / 9;
+        border: none;
+      }
       .nosotros-texto {
         text-align: center;
       }
