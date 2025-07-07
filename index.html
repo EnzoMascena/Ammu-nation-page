@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Ammu-Nation GTA V - Tienda de armas online inspirada en GTA.">
+  <meta name="keywords" content="armas, GTA, ecommerce, tienda online, carrito de compras">
+  <meta name="author" content="Enzo Mascena">
   <title>Ammu-Nation GTA V</title>
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="icon" type="image/png" href="images/Ammu_Nation_Logo_GTA-V.webp" />
@@ -14,40 +17,43 @@
 
   <nav>
     <ul>
-      <li><a href="#nosotros" class="activo">Nosotros</a></li>
+      <li><a href="productos.html">Página API</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#Catálogo">Catálogo</a></li>
       <li><a href="#Clientes">Clientes</a></li>
       <li><a href="#formulario">Contacto</a></li>
-      <li><a href="#lista-carrito" id="ver-carrito">🛒 Carrito (<span id="contador">0</span>)</a></li>
+      <li><a href="#carrito" id="ver-carrito">🛒 Carrito (<span id="contador">0</span>)</a></li>
     </ul>
   </nav>
 
   <main>
     <section id="nosotros" class="seccion-nosotros">
-    <h2 class="titulo-seccion">Nosotros</h2>
-    <div class="linea-separadora"></div>
-    <div class="contenido-nosotros">
-      <div class="video-nosotros">
-        <iframe width="100%" height="315"
-          src="https://www.youtube.com/embed/z-cQnyKwQQA"
-          title="Video de presentación"
+      <h2 class="titulo-seccion">¿Quiénes somos?</h2>
+      <div class="linea-separadora"></div>
+      <div class="contenedor-nosotros">
+        <div class="nosotros-texto">
+          <p>
+            En Ammu-Nation nos enorgullece ser el bastión de la libertad armada desde tiempos inmemoriales. Ya sea que quieras proteger tu propiedad, marcar presencia en el campo de tiro o simplemente sentir el poder en tus manos, tenemos lo que necesitás. Porque en Ammu-Nation no preguntamos... ¡disparamos soluciones!
+          </p>
+        </div>
+        <div class="nosotros-video">
+          <iframe
+          src="https://www.youtube.com/embed/z-cQnyKwQQA?autoplay=1&mute=1"
+          width="100%"
+          height="100%"
           frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          ></iframe>
 
+        </div>
       </div>
-      <div class="texto-nosotros">
-        <p>
-          Bienvenidos a Ammu-Nation, el orgullo armado de América desde que alguien dijo "¿y si solucionamos todo a tiros?". Somos la cadena número uno en ventas de armas, municiones y libertades mal entendidas. Ya sea que quieras defender tu hogar, impresionar a tus amigos en el campo de tiro o simplemente compensar alguna inseguridad, tenemos justo lo que necesitás, cargado y listo. En Ammu-Nation no preguntamos por qué necesitás un lanzacohetes… solo te ofrecemos uno con descuento. Porque si algo aprendimos en este país, es que nada dice “civilización” como una ametralladora en el baúl.
-        </p>
-      </div>
-    </div>
     </section>
+
     
-    <h2 id="Catálogo">Nuestras Armas</h2>
+    <h2 id="Catálogo" class="titulo-seccion">Nuestras Armas</h2>
     <div class="linea-separadora"></div>
-    <section class="productos">
+    <section id="productos" class="productos">
       <article class="producto">
         <img src="images/pistola_9mm.jpg.webp" alt="Pistola" />
         <h3>Pistola 9MM</h3>
@@ -117,6 +123,11 @@
       <h2>Carrito de compras</h2>
       <ul id="lista-carrito"></ul>
       <p><strong>Total: $<span id="total">0</span></strong></p>
+
+      <div class="acciones-carrito">
+        <button id="vaciar-carrito">Vaciar carrito</button>
+        <button id="finalizar-compra">Finalizar compra</button>
+      </div>
     </section>
 
     <section class="testimonios" id="Clientes">
@@ -161,15 +172,16 @@
         </div>
           <section id="formulario">
           <h2>Dejanos tu opinión</h2>
-          <form action="#" method="post">
+          <form id="form-contacto" action="https://formspree.io/f/mblyewbz" method="POST">
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="email" required><br><br>
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br><br>
-            <label for="correo">Correo electrónico:</label><br>
-            <input type="email" id="correo" name="correo" required><br><br>
             <label for="comentario">Comentario:</label><br>
-            <textarea id="comentario" name="comentario" rows="4" required></textarea><br><br>
-            <button type="submit">Enviar</button>
-          </form>
+            <textarea id="comentario" name="message" rows="4" required></textarea><br><br>
+          <button type="submit">Enviar</button>
+        </form>
+
         </section>
         </div>
       </section>
@@ -183,5 +195,6 @@
 
 
   <script src="js/carrito.js"></script>
+  <script src="js/formulario.js"></script>
 </body>
 </html>

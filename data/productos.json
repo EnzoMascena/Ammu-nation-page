@@ -1,0 +1,56 @@
+[
+  {
+    "nombre": "Pistola 9mm",
+    "precio": 350,
+    "imagen": "images/pistola_9mm.jpg.webp",
+    "alt": "Pistola"
+  },
+  {
+    "nombre": "Rifle de Asalto",
+    "precio": 1400,
+    "imagen": "images/rifle_de_asalto.webp",
+    "alt": "Rifle de asalto"
+  },
+  {
+    "nombre": "Rifle Francotirador",
+    "precio": 5000,
+    "imagen": "images/francotirador.webp",
+    "alt": "Francotirador"
+  },
+  {
+    "nombre": "Escopeta de corredera",
+    "precio": 550,
+    "imagen": "images/escopeta_de_corredera.webp",
+    "alt": "Escopeta de corredera"
+  },
+  {
+    "nombre": "Lanza granadas",
+    "precio": 8100,
+    "imagen": "images/lanza granadas.webp",
+    "alt": "Lanza granadas"
+  },
+  {
+    "nombre": "Minigun",
+    "precio": 15000,
+    "imagen": "images/minigun.webp",
+    "alt": "Minigun"
+  },
+  {
+    "nombre": "Micro SMG",
+    "precio": 850,
+    "imagen": "images/micro_smg.webp",
+    "alt": "Micro SMG"
+  },
+  {
+    "nombre": "Rifle pesado",
+    "precio": 1800,
+    "imagen": "images/rifle_pesado.webp",
+    "alt": "Rifle pesado"
+  },
+  {
+    "nombre": "Granada",
+    "precio": 350,
+    "imagen": "images/granada.webp",
+    "alt": "Granada"
+  }
+]
